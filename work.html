@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <title>Joyce Wangsa | Math Student</title>
+    <meta name="title" content="Joyce Wangsa">
+    <meta name="description" content="Hello there! I’m a third year student in the University of Waterloo pursuing a Bachelor of Mathematics 🎓 with a major in computational math 📈.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Titan+One&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"media="screen">
+    <noscript>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Titan+One&display=swap"
+        rel="stylesheet"
+        type="text/css"
+        />
+    </noscript>
+    <script src="https://kit.fontawesome.com/8478bc9686.js" crossorigin="anonymous" async></script>
+    <link rel="icon" href="p5.PNG">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="photos/amanda1.png" alt="logo" width="159" height="78.5"></a>
+            <div class="love">
+              <input id="switch" type="checkbox">
+              <label class="love-heart" for="switch">
+                <i class="left"></i>
+                <i class="right"></i>
+                <i class="bottom"></i>
+                <div class="round"></div>
+              </label>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class='far icon' onclick="hideMenu()">&#x9f410;</i>
+                <ul>
+                    <li><a href="./about.html">about</a></li>
+                    <li><a href="./work.html">work</a></li>
+                    <li><a href="Resume_JoyceWangsa.pdf" target="_blank">resume</a></li>
+                    <li><a href="./contact.html">contact</a></li>
+                    <li><a href="./etc.html">etc :)</a></li>
+                </ul>
+            </div>
+            <i class='fas icon' onclick="showMenu()">&#xf0c9;</i>
+        </nav>
+        <div class="work">
+            <h1>My Work Experience</h1>
+            <p class="light-mode-text">hover over the cards to learn more!</p>
+            <div class="row">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="photos/zenius.jpg">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Zenius Education</h1>
+                        <h2>Math Specialist Intern</h2>
+                        <p>To expedite machine learning improvement in Zenbot (auto doubt solve) accuracy, I collaborated with the product and data science team to facilitate data deduplication and topic classification. Identifying areas for further investigation was also another highlight in this internship as I got to conduct analysis support related to Zenbot.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="photos/lifepal.jpg">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Lifepal</h1>
+                        <h2>Marketing Analyst Intern</h2>
+                        <p>I interpreted data, formulated reports and made recommendations to optimize marketing campaigns with aims of improving conversion and click through rates. Another takeaway from this internship is the ability to outsource and provide first hand, expert knowledge for our customer base so as to increase leads generation.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="photos/jdid.JPG">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>JD.ID</h1>
+                        <h2>Merchandising Intern</h2>
+                        <p>With a target to maximize growth and profitability, I analyzed the overall pricing competitiveness of competitors and identified potential markets. This enabled me to forecast sales trends, highlight opportunities for new initiatives and promotions. I collaborated with the warehouse team to ensure timely and effective fulfillment to customers.</p>
+                      </div>
+                    </div>
+                  </div>
+            
+        </div>
+    </section>
+</body>
+</html>
+<!--- Javascript for Toggling--->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+<!--- Javascript for dark mode--->
+<script>
+  let mode = 0;
+  const checkbox = document.getElementById('switch');
+
+  checkbox.addEventListener('change', () => {
+      document.body.classList.toggle("dark-mode");
+      if (mode == 0) {
+          let textElements = document.getElementsByClassName('light-mode-text');
+          for (let i = textElements.length - 1; i >= 0; i--)
+              textElements[i].setAttribute("class", "dark-mode-text");
+          mode = 1;
+      }
+      else {
+          let textElements = document.getElementsByClassName('dark-mode-text');
+          for (let i = textElements.length - 1; i >= 0; i--)
+              textElements[i].setAttribute("class", "light-mode-text");
+          mode = 0;
+      }
+  })
+</script>
